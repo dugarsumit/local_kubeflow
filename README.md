@@ -1,4 +1,4 @@
-# Kubeflow Local
+# Local Kubeflow
 This setup does the following things.
 
 - [x] Creates a kubernetes cluster using k3s.
