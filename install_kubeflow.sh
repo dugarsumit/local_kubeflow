@@ -15,7 +15,6 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     localkubectl wait --for condition=established --timeout=60s crd/applications.app.k8s.io
     localkubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/env/platform-agnostic-pns?ref=$PIPELINE_VERSION"
     seelp 10s
-    localkubectl apply -f cluster/kf-pipelines/aws_secrets.yaml
     echo "done!!"
     echo "Run the following command in order to access the pipelines at http://localhost:8081"
     echo "----------------------------------------------------------------"
